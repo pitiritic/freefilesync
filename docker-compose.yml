@@ -1,0 +1,10 @@
+version: '3'
+services:
+  freefilesync:
+    image: jlesage/freefilesync
+    container_name: freefilesync       
+    restart: unless-stopped
+    ports:
+      - "5800:5800"
+    volumes:
+      - ./actual-data:/data
